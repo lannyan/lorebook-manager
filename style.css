@@ -789,7 +789,7 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 }
 .wb-search-highlight.active { background-color: rgba(255, 0, 0, 0.4); box-shadow: 0 0 0 2px #ef4444; }
 .wb-tooltip {
-    position: fixed; background: #1a1a1a; color: rgba(0,0,0,1);
+    position: fixed; background: #1a1a1a; color: #e5e5e5 !important;
     border: 1px solid #404040; border-radius: 8px; padding: 6px 10px;
     font-size: 0.85em; z-index: 30000; box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     pointer-events: none; opacity: 0; transition: opacity 0.15s;
@@ -1185,6 +1185,7 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
     justify-content: space-between;
     align-items: center;
     background: #1a1a1a;
+    color: #e5e5e5 !important;
     border: 1px solid #404040;
     padding: 10px 15px;
     border-radius: 8px;
@@ -2005,3 +2006,12 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 /* @D 標籤文字 */
 #enhanced-wb-panel-v6 .wb-pos-wrapper {
     color: #a0a0a0;
+
+/* === 強制修正：Token 計數器字體顏色 === */
+#enhanced-wb-panel-v6 .wb-token-display,
+#enhanced-wb-panel-v6 .wb-card.type-green .wb-token-display,
+#enhanced-wb-panel-v6 .wb-card.type-blue .wb-token-display {
+    color: #000000 !important; /* 強制純黑 */
+    font-weight: 800 !important; /* 加粗 */
+    text-shadow: none !important; /* 移除任何可能導致模糊的陰影 */
+    -webkit-text-fill-color: #000000 !important; /* 確保不被瀏覽器填充色影響 */
