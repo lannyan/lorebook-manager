@@ -2647,9 +2647,9 @@ const UI = {
 
             overlay.innerHTML = `
                 <div class="wb-sort-modal" style="width:1000px; height:85vh; max-width:95vw; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-                    <div class="wb-sort-header" style="background:#fff; border-bottom:1px solid #e5e7eb; padding:10px 20px; height:60px;">
-                        <span style="font-size:1.1em; font-weight:bold; color:#111827; display:flex; align-items:center; gap:15px;">
-                            <i class="fa-solid fa-align-left" id="wb-ctx-toggle-sidebar" style="cursor:pointer; color:#6b7280; transition:0.2s" title="切換側邊欄"></i>
+                    <div class="wb-sort-header" style="background:#2d2d2d; border-bottom:1px solid #404040; padding:10px 20px; height:60px;">
+                        <span style="font-size:1.1em; font-weight:bold; color:#e5e5e5; display:flex; align-items:center; gap:15px;">
+                            <i class="fa-solid fa-align-left" id="wb-ctx-toggle-sidebar" style="cursor:pointer; color:#a0a0a0; transition:0.2s" title="切換側邊欄"></i>
                             <span class="wb-ctx-header-title-text">實際上下文預覽</span>
                         </span>
                         <div style="display:flex; align-items:center;">
