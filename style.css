@@ -652,7 +652,7 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 }
 @keyframes wbFadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
 .wb-popup-header {
-    font-weight: bold; color: #000000; padding-bottom: 5px;
+    font-weight: bold; color: #ffffff; padding-bottom: 5px;
     display: flex; justify-content: center;
     align-items: center; font-size: 1.1em;
 }

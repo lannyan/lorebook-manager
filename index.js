@@ -1672,7 +1672,7 @@ const UI = {
             <div class="wb-popup-header"><span>${entry.comment || '未命名條目'}</span></div>
             <input class="wb-popup-input-keys" placeholder="關鍵詞 (英文逗號分隔)" value="${escapeHtml(tempKeys)}">
             <textarea class="wb-popup-textarea" placeholder="在此編輯內容...">${escapeHtml(tempContent)}</textarea>
-            <div class="wb-popup-footer"><button class="wb-btn-black btn-cancel">取消</button><button class="wb-btn-black btn-save">儲存</button></div>
+            <div class="wb-popup-footer"><button class="wb-btn-rect btn-cancel" style="background:#fff; color:#000; border:1px solid #e5e7eb;">取消</button><button class="wb-btn-rect btn-save">儲存</button></div>
         `;
         overlay.appendChild(popup);
         document.body.appendChild(overlay);
