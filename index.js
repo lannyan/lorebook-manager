@@ -3006,12 +3006,33 @@ jQuery(async () => {
             });
 
             console.log("[世界書編輯器] 按鈕已成功注入到擴充功能面板。");
+            return true;
         } else {
-            console.warn("[世界書編輯器] 找不到擴充功能面板容器。跳過按鈕注入。");
+            console.warn("[世界書編輯器] 找不到擴充功能面板容器。");
+            return false;
         }
     };
 
-    injectButton();
+    // 立即嘗試注入
+    let injected = injectButton();
+
+    // 如果失敗，監聽擴充功能按鈕的點擊事件
+    if (!injected) {
+        const extensionsBtn = document.querySelector('#extensionsMenuButton');
+        if (extensionsBtn) {
+            console.log("[世界書編輯器] 監聽擴充功能按鈕點擊事件...");
+            extensionsBtn.addEventListener('click', () => {
+                setTimeout(injectButton, 100);
+            });
+        }
+
+        // 也嘗試延遲注入
+        setTimeout(() => {
+            if (!injected) {
+                injected = injectButton();
+            }
+        }, 1000);
+    }
 
     const performInit = async () => {
         try {
