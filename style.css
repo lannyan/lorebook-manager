@@ -50,8 +50,15 @@
 
 .wb-tabs {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     position: relative;
+}
+
+/* 移動端：縮小 Tab 間距 */
+@media (max-width: 768px) {
+    .wb-tabs {
+        gap: 3px;
+    }
 }
 
 .wb-tab {
@@ -1251,7 +1258,6 @@ input:checked + .wb-slider:before {
         width: 100vw;
         height: 100vh;
         border-radius: 0;
-        /* 修復移動端定位：使用 top/left 而非 transform */
         top: 0;
         left: 0;
         transform: none;
@@ -1259,14 +1265,258 @@ input:checked + .wb-slider:before {
         max-height: 100vh;
     }
 
+    /* === 優化 Tab 顯示 === */
+    .wb-header-bar {
+        padding: 0 8px;
+        height: 48px;
+    }
+
+    .wb-tabs {
+        gap: 4px;
+        width: 100%;
+    }
+
+    .wb-tab {
+        padding: 6px 8px;
+        font-size: 0.7em;
+        gap: 4px;
+        flex: 1;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .wb-tab i {
+        font-size: 0.9em;
+    }
+
+    .wb-tab-glider {
+        border-radius: 6px;
+    }
+
+    .wb-header-close {
+        font-size: 1.2em;
+        padding: 3px;
+    }
+
+    /* === 視圖區域 === */
     .wb-bind-grid {
         grid-template-columns: 1fr;
     }
 
     .wb-tool-bar {
         flex-wrap: wrap;
+        padding: 8px;
+        gap: 6px;
     }
 
+    .wb-book-bar {
+        padding: 8px;
+        gap: 6px;
+    }
+
+    #wb-book-selector {
+        font-size: 0.85em;
+        padding: 6px 10px;
+    }
+
+    .wb-btn-circle {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9em;
+    }
+
+    .wb-stat-line {
+        padding: 6px 8px;
+    }
+
+    .wb-stat-item {
+        font-size: 0.7em;
+    }
+
+    .wb-warning-badge {
+        font-size: 0.7em;
+        padding: 3px 6px;
+    }
+
+    #wb-search-entry,
+    #wb-manage-search {
+        font-size: 0.85em;
+        padding: 6px 10px;
+    }
+
+    .wb-list {
+        padding: 8px;
+    }
+
+    /* === 條目卡片優化 === */
+    .wb-card {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .wb-card-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .wb-row {
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 6px;
+    }
+
+    .wb-row:first-child {
+        flex-wrap: nowrap;
+    }
+
+    .wb-inp-title {
+        font-size: 0.85em;
+        padding: 6px 10px;
+    }
+
+    /* 開關按鈕縮小 */
+    .wb-switch {
+        width: 38px;
+        height: 20px;
+    }
+
+    .wb-slider:before {
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+    }
+
+    input:checked + .wb-slider:before {
+        transform: translateX(18px);
+    }
+
+    /* 位置選擇器 */
+    .wb-pos-wrapper {
+        min-width: auto;
+        flex: 1 1 110px;
+    }
+
+    .inp-pos {
+        min-width: 85px;
+        font-size: 0.75em;
+        padding: 5px 8px;
+    }
+
+    .inp-pos-depth {
+        width: 40px;
+        padding: 5px;
+        font-size: 0.75em;
+    }
+
+    /* 順序輸入 */
+    .wb-ctrl-group.order-group {
+        min-width: auto;
+        flex: 0 1 auto;
+    }
+
+    .wb-ctrl-group.order-group span {
+        font-size: 0.7em;
+    }
+
+    .inp-order {
+        width: 42px !important;
+        font-size: 0.7em;
+        padding: 4px;
+    }
+
+    /* Token 顯示 */
+    .wb-token-display {
+        min-width: 42px;
+        font-size: 0.7em;
+        padding: 4px 6px;
+    }
+
+    .wb-inp-num {
+        font-size: 0.75em;
+    }
+
+    /* === 管理頁面 === */
+    .wb-tag-filter-section {
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    .wb-tag-filter-item {
+        font-size: 0.75em;
+        padding: 4px 8px;
+    }
+
+    .wb-btn-clear-tags {
+        font-size: 0.7em;
+        padding: 3px 8px;
+    }
+
+    .wb-group-header {
+        padding: 8px 10px;
+    }
+
+    .wb-group-title {
+        font-size: 0.85em;
+    }
+
+    .wb-group-count {
+        font-size: 0.7em;
+    }
+
+    .wb-manage-card {
+        padding: 10px;
+        margin-bottom: 8px;
+    }
+
+    .wb-card-title {
+        font-size: 0.85em;
+    }
+
+    .wb-card-subtitle {
+        font-size: 0.7em;
+    }
+
+    .wb-icon-action {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8em;
+    }
+
+    .wb-manage-note {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    .wb-book-tag {
+        font-size: 0.75em;
+        padding: 3px 8px;
+    }
+
+    .wb-tags-input {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    .wb-btn-save-tags {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    /* === 底部資訊 === */
+    .wb-footer-info {
+        padding: 8px;
+        font-size: 0.75em;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .wb-footer-avatar {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* === 彈窗 === */
     .wb-sort-modal {
         width: 100vw;
         height: 100vh;
@@ -1274,635 +1524,40 @@ input:checked + .wb-slider:before {
         max-height: none;
     }
 
-    /* === 修復卡片控制項換行問題 === */
-    .wb-card-header {
-        flex-direction: column;
+    .wb-sort-header {
+        font-size: 0.9em;
+        padding: 12px 15px;
     }
 
-    .wb-row {
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    /* 標題行保持不換行 */
-    .wb-row:first-child {
-        flex-wrap: nowrap;
-    }
-
-    /* 控制項行允許換行 */
-    .wb-row:last-child {
-        gap: 8px;
-    }
-
-    /* 位置選擇器適應小螢幕 */
-    .wb-pos-wrapper {
-        min-width: auto;
-        flex: 1 1 140px;
-    }
-
-    .inp-pos {
-        min-width: 100px;
-    }
-
-    /* 順序輸入框縮小 */
-    .wb-ctrl-group.order-group {
-        min-width: auto;
-        flex: 0 1 auto;
-    }
-
-    .inp-order {
-        width: 50px !important;
-    }
-
-    /* Token 顯示調整 */
-    .wb-token-display {
-        min-width: 50px;
-    }
-
-    /* 開關按鈕群組 */
-    .wb-ctrl-group {
-        flex: 0 0 auto;
-    }
-
-    /* 輸入框號碼欄位 */
-    .wb-inp-num {
-        font-size: 0.8em;
-    }
-
-    /* 條目卡片內邊距調整 */
-    .wb-card {
-        padding: 12px;
-    }
-
-    /* Tab 文字縮小 */
-    .wb-tab {
-        padding: 8px 12px;
-        font-size: 0.85em;
-    }
-
-    .wb-tab span {
-        display: none;
-    }
-
-    /* 書籍選擇欄適配 */
-    .wb-book-bar {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    /* 統計行文字縮小 */
-    .wb-stat-item {
-        font-size: 0.8em;
-    }
-
-    /* 頭部欄縮小 */
-    .wb-header-bar {
-        padding: 0 10px;
-        height: 50px;
-    }
-
-    /* 列表內邊距縮小 */
-    .wb-list {
-        padding: 10px;
+    .wb-sort-body {
+        padding: 15px;
     }
 }
 
-/* === 匯出彈窗樣式 === */
-.wb-export-card {
-    background: var(--wb-bg-secondary);
-    border-radius: 12px;
-    width: 90%;
-    max-width: 450px;
-    overflow: hidden;
-}
-
-.wb-export-header {
-    background: var(--wb-bg-tertiary);
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--wb-border);
-}
-
-.wb-export-title {
-    color: var(--wb-text-primary);
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-.wb-export-close {
-    cursor: pointer;
-    color: var(--wb-text-secondary);
-    font-size: 1.5em;
-}
-
-.wb-export-close:hover {
-    color: var(--wb-text-primary);
-}
-
-.wb-export-section {
-    padding: 20px;
-    border-bottom: 1px solid var(--wb-border);
-}
-
-.wb-export-section:last-child {
-    border-bottom: none;
-}
-
-.wb-export-label {
-    color: var(--wb-text-secondary);
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
-
-.wb-export-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.wb-export-btn {
-    background: var(--wb-bg-tertiary);
-    color: var(--wb-text-primary);
-    border: 1px solid var(--wb-border);
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.wb-export-btn:hover {
-    background: var(--wb-accent);
-    color: #fff;
-    border-color: var(--wb-accent);
-}
-
-/* === 自訂下拉樣式 === */
-.wb-gr-trigger {
-    background: var(--wb-bg-tertiary);
-    color: var(--wb-text-primary);
-    border: 1px solid var(--wb-border);
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.wb-gr-dropdown {
-    position: fixed;
-    background: var(--wb-bg-secondary);
-    border: 1px solid var(--wb-border);
-    border-radius: 8px;
-    z-index: 10000;
-    display: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.wb-gr-dropdown.show {
-    display: block;
-}
-
-.wb-gr-search-box {
-    padding: 10px;
-    border-bottom: 1px solid var(--wb-border);
-}
-
-.wb-gr-search-input {
-    width: 100%;
-    background: var(--wb-bg-tertiary);
-    color: var(--wb-text-primary);
-    border: 1px solid var(--wb-border);
-    padding: 6px 10px;
-    border-radius: 4px;
-}
-
-.wb-gr-options-container {
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.wb-gr-group-label {
-    padding: 8px 15px;
-    background: var(--wb-bg-tertiary);
-    color: var(--wb-text-secondary);
-    font-size: 0.85em;
-    font-weight: bold;
-}
-
-.wb-gr-option {
-    padding: 10px 15px;
-    color: var(--wb-text-primary);
-    cursor: pointer;
-}
-
-.wb-gr-option:hover {
-    background: var(--wb-bg-tertiary);
-}
-
-.wb-gr-option.selected {
-    background: var(--wb-accent);
-    color: #fff;
-}
-
-.wb-gr-option.hidden {
-    display: none;
-}
-
-/* === 統計分析樣式 === */
-.wb-stats-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 20px;
-    gap: 20px;
-}
-
-.wb-stats-row {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.wb-stats-label {
-    display: flex;
-    justify-content: space-between;
-    color: var(--wb-text-primary);
-    font-weight: bold;
-}
-
-.wb-stats-total {
-    color: var(--wb-text-secondary);
-    font-weight: normal;
-}
-
-.wb-progress-bar {
-    display: flex;
-    height: 40px;
-    border-radius: 8px;
-    overflow: hidden;
-    background: var(--wb-bg-primary);
-}
-
-.wb-bar-seg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 0.9em;
-}
-
-.wb-bg-blue {
-    background: #3b82f6;
-}
-
-.wb-bg-green {
-    background: #22c55e;
-}
-
-.wb-bar-legend {
-    display: flex;
-    gap: 20px;
-    font-size: 0.9em;
-}
-
-.wb-legend-dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
-.wb-dot-blue {
-    background: #3b82f6;
-}
-
-.wb-dot-green {
-    background: #22c55e;
-}
-
-/* === 餅圖 === */
-.wb-pie-row {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 20px 0;
-}
-
-.wb-pie-chart {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.wb-pie-legend {
-    flex: 1;
-}
-
-.wb-pie-legend-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    color: var(--wb-text-primary);
-}
-
-.wb-pie-sub {
-    color: var(--wb-text-secondary);
-    font-size: 0.85em;
-    margin-top: 10px;
-}
-
-/* === 排行榜 === */
-.wb-rank-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    overflow-y: auto;
-    max-height: 300px;
-}
-
-.wb-rank-pill {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-    border-radius: 6px;
-    border: 1px solid var(--wb-border);
-}
-
-.wb-rank-pill-name {
-    flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: var(--wb-text-primary);
-}
-
-.wb-rank-pill-val {
-    font-weight: bold;
-    color: var(--wb-text-secondary);
-    margin-left: 15px;
-}
-
-/* === 警告列表 === */
-.wb-warning-header-red {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #ef4444;
-    font-weight: bold;
-}
-
-.wb-warning-alert-box {
-    background: rgba(239, 68, 68, 0.1);
-    border: 1px solid rgba(239, 68, 68, 0.3);
-    color: #ef4444;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    font-size: 0.9em;
-}
-
-.wb-warning-list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px;
-    background: var(--wb-bg-secondary);
-    border: 1px solid var(--wb-border);
-    border-radius: 6px;
-    margin-bottom: 8px;
-}
-
-/* === 上下文預覽 === */
-.wb-ctx-layout-container {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-}
-
-.wb-ctx-sidebar-panel {
-    width: 280px;
-    background: var(--wb-bg-secondary);
-    border-right: 1px solid var(--wb-border);
-    overflow-y: auto;
-    transition: width 0.2s, margin 0.2s;
-}
-
-.wb-ctx-sidebar-panel.collapsed {
-    width: 0;
-    margin-left: -280px;
-}
-
-.wb-ctx-viewer-panel {
-    flex: 1;
-    overflow-y: auto;
-    padding: 20px;
-}
-
-.wb-ctx-sidebar-item {
-    padding: 12px 15px;
-    border-bottom: 1px solid var(--wb-border);
-    cursor: pointer;
-    display: flex;
-    gap: 10px;
-    transition: background 0.2s;
-    position: relative;
-}
-
-.wb-ctx-sidebar-item:hover {
-    background: var(--wb-bg-tertiary);
-}
-
-.wb-ctx-sidebar-item.active {
-    background: var(--wb-bg-tertiary);
-}
-
-.wb-ctx-sidebar-item.filtered-out {
-    display: none;
-}
-
-.wb-ctx-bar {
-    width: 4px;
-    border-radius: 2px;
-    flex-shrink: 0;
-}
-
-.wb-bar-blue {
-    background: var(--wb-blue);
-}
-
-.wb-bar-green {
-    background: var(--wb-green);
-}
-
-.wb-ctx-info {
-    flex: 1;
-    overflow: hidden;
-}
-
-.wb-ctx-name {
-    color: var(--wb-text-primary);
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-/* === 上下文區塊 === */
-.wb-ctx-block {
-    background: var(--wb-bg-secondary);
-    border: 1px solid var(--wb-border);
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-.wb-ctx-block.filtered-out {
-    display: none;
-}
-
-.wb-ctx-block-title {
-    color: var(--wb-text-primary);
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--wb-border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.wb-ctx-block-content {
-    color: var(--wb-text-secondary);
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    line-height: 1.6;
-}
-
-/* 純淨模式 */
-.wb-clean-mode .wb-ctx-block-title {
-    display: none;
-}
-
-.wb-clean-mode .wb-ctx-block {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.wb-clean-mode .wb-ctx-block-content {
-    color: var(--wb-text-primary);
-}
-
-/* === 搜尋容器 === */
-.wb-ctx-search-container {
-    display: flex;
-    align-items: center;
-    background: var(--wb-bg-tertiary);
-    border: 1px solid var(--wb-border);
-    border-radius: 6px;
-    padding: 6px 12px;
-    gap: 8px;
-}
-
-.wb-ctx-search-input {
-    background: transparent;
-    border: none;
-    color: var(--wb-text-primary);
-    outline: none;
-    flex: 1;
-    min-width: 150px;
-}
-
-.wb-ctx-nav-controls {
-    display: none;
-    align-items: center;
-    gap: 5px;
-    padding-left: 10px;
-    border-left: 1px solid var(--wb-border);
-}
-
-.wb-ctx-nav-controls.show {
-    display: flex;
-}
-
-.wb-ctx-nav-btn {
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-    background: var(--wb-bg-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: var(--wb-text-secondary);
-    transition: all 0.2s;
-}
-
-.wb-ctx-nav-btn:hover {
-    background: var(--wb-bg-secondary);
-    color: var(--wb-text-primary);
-}
-
-.wb-ctx-nav-info {
-    color: var(--wb-text-secondary);
-    font-size: 0.85em;
-    min-width: 40px;
-    text-align: center;
-}
-
-/* === 搜尋高亮 === */
-.wb-search-highlight {
-    background: #fbbf24;
-    color: #000;
-    padding: 2px 4px;
-    border-radius: 2px;
-}
-
-.wb-search-highlight.active {
-    background: #f59e0b;
-}
-
-/* === 工具列 === */
-.wb-action-icon {
-    cursor: pointer;
-    color: var(--wb-text-secondary);
-    font-size: 1.2em;
-    padding: 5px;
-    transition: color 0.2s;
-}
-
-.wb-action-icon:hover {
-    color: var(--wb-text-primary);
-}
-
-.wb-close-modal {
-    cursor: pointer;
-    color: var(--wb-text-secondary);
-    transition: color 0.2s;
-}
-
-.wb-close-modal:hover {
-    color: var(--wb-text-primary);
-}
-
-/* === 動畫 === */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* === Grid 佈局修復（針對卡片第二行）=== */
+@media (max-width: 768px) {
+    .wb-card-header > div > .wb-row:nth-child(2) {
+        display: grid;
+        grid-template-columns: auto auto 1fr auto;
+        gap: 6px;
+        align-items: center;
     }
-    to {
-        opacity: 1;
-    }
-}
 
-.wb-modal-overlay {
-    animation: fadeIn 0.2s;
+    .wb-card-header > div > .wb-row:nth-child(2) > .wb-ctrl-group {
+        grid-column: span 1;
+    }
+
+    .wb-card-header > div > .wb-row:nth-child(2) > .wb-pos-wrapper {
+        grid-column: span 1;
+    }
+
+    .wb-card-header > div > .wb-row:nth-child(2) > .wb-ctrl-group.order-group {
+        grid-column: span 1;
+    }
+
+    .wb-card-header > div > .wb-row:nth-child(2) > .wb-token-display {
+        grid-column: span 1;
+    }
 }
 
 /* === 輔助類 === */
