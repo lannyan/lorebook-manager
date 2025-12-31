@@ -2985,24 +2985,29 @@ jQuery(async () => {
     const injectButton = () => {
         if (document.getElementById(CONFIG.btnId)) return;
 
-        const targetButton = document.querySelector('#extensionsMenuButton');
+        // 查找第一個 list-group-item，然後獲取其父容器
+        const firstMenuItem = document.querySelector('.list-group-item');
 
-        if (targetButton) {
+        if (firstMenuItem && firstMenuItem.parentElement) {
+            const container = firstMenuItem.parentElement;
+
             const html = `
-                <div id="${CONFIG.btnId}" class="fa-solid fa-book-journal-whills interactable" title="世界書管理" tabindex="0" style="display: flex;">
+                <div id="${CONFIG.btnId}" class="list-group-item flex-container flexGap5 interactable" title="世界書管理" tabindex="0" role="listitem">
+                    <i class="fa-solid fa-book-journal-whills"></i>
+                    <span>世界書管理</span>
                 </div>
             `;
 
-            $(targetButton).after(html);
+            $(container).append(html);
 
             $(`#${CONFIG.btnId}`).on('click', (e) => {
                 e.preventDefault();
                 UI.open();
             });
 
-            console.log("[世界書編輯器] 按鈕已成功注入到擴充功能區旁。");
+            console.log("[世界書編輯器] 按鈕已成功注入到擴充功能面板。");
         } else {
-            console.warn("[世界書編輯器] 找不到目標按鈕 #extensionsMenuButton。跳過按鈕注入。");
+            console.warn("[世界書編輯器] 找不到擴充功能面板容器。跳過按鈕注入。");
         }
     };
 
