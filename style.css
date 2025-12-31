@@ -1741,70 +1741,80 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 }
 
 /* ========================================
-   輸入框深色優化（半透明/深灰）
+   輸入框深色優化（淡灰底+深色文字）
    ======================================== */
 
-/* 標題輸入框 - 改為深灰半透明 */
+/* 標題輸入框 - 淡灰底色，深色文字 */
 #enhanced-wb-panel-v6 .wb-inp-title {
-    background: rgba(255, 255, 255, 0.05) !important;
-    color: #e5e5e5 !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #1f2937 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    -webkit-text-fill-color: #1f2937 !important;
 }
 
 #enhanced-wb-panel-v6 .wb-inp-title:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border-color: rgba(255, 255, 255, 0.15) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
 #enhanced-wb-panel-v6 .wb-inp-title:focus {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.18) !important;
     border-color: #7c5cbd !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
-/* @D 和順序輸入框 - 深灰半透明 */
+/* @D 和順序輸入框 - 淡灰底色，深色文字 */
 #enhanced-wb-panel-v6 .wb-inp-num {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #e5e5e5 !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #1f2937 !important;
+    -webkit-text-fill-color: #1f2937 !important;
 }
 
 #enhanced-wb-panel-v6 .wb-inp-num:focus {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.18) !important;
     border-color: #7c5cbd !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 /* Token 顯示保持原樣（已有顏色背景）*/
 /* 綠燈和藍燈的 Token 不變 */
 
-/* 搜尋框 - 深灰半透明 */
+/* 搜尋框 - 淡灰底色，深色文字 */
 #enhanced-wb-panel-v6 input[type="text"],
 #enhanced-wb-panel-v6 input[type="search"] {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #e5e5e5 !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #1f2937 !important;
+    -webkit-text-fill-color: #1f2937 !important;
 }
 
 #enhanced-wb-panel-v6 input[type="text"]:focus,
 #enhanced-wb-panel-v6 input[type="search"]:focus {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.18) !important;
     border-color: #7c5cbd !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 #enhanced-wb-panel-v6 input[type="text"]::placeholder,
 #enhanced-wb-panel-v6 input[type="search"]::placeholder {
-    color: rgba(255, 255, 255, 0.3) !important;
+    color: rgba(0, 0, 0, 0.4) !important;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.4) !important;
 }
 
-/* 下拉選擇器觸發器 - 深灰半透明 */
+/* 下拉選擇器觸發器 - 淡灰底色 */
 .wb-gr-trigger {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #e5e5e5 !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #1f2937 !important;
 }
 
 .wb-gr-trigger:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border-color: rgba(255, 255, 255, 0.15) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
 /* 圓形按鈕保持原樣（已有樣式）*/
@@ -1812,19 +1822,30 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 
 /* 管理頁面搜尋框 */
 #wb-manage-search {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #e5e5e5 !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #1f2937 !important;
+    -webkit-text-fill-color: #1f2937 !important;
+}
+
+#wb-manage-search:focus {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: #7c5cbd !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 /* 備註輸入框 */
 .wb-manage-note {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #e5e5e5 !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #1f2937 !important;
+    -webkit-text-fill-color: #1f2937 !important;
 }
 
 .wb-manage-note:focus {
-    background: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.18) !important;
     border-color: #7c5cbd !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
 }
