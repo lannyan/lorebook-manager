@@ -573,7 +573,7 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 .wb-gr-option {
     padding: 8px 12px;
     margin: 2px 4px; /* 修改：增加左右外边距 */
-    color: #2c3e50;
+    color: #e5e5e5;
     cursor: pointer;
     position: relative;
     font-size: 0.9em;
