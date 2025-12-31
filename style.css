@@ -2003,3 +2003,61 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 #enhanced-wb-panel-v6 .wb-pos-wrapper {
     color: #a0a0a0;
 }
+
+/* ========================================
+   修正：Token 和標籤文字可讀性
+   ======================================== */
+
+/* Token 數字改為深色文字（在淺色背景上） */
+#enhanced-wb-panel-v6 .wb-card.type-green .wb-token-display {
+    background-color: #dcfce7 !important;
+    color: #166534 !important;
+}
+
+#enhanced-wb-panel-v6 .wb-card.type-blue .wb-token-display {
+    background-color: #dbeafe !important;
+    color: #1e40af !important;
+}
+
+/* 禁用 Token 保持灰色 */
+#enhanced-wb-panel-v6 .wb-card.disabled .wb-token-display {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #6b7280 !important;
+}
+
+/* 世界書標籤改為淺灰色（非紫色） */
+#enhanced-wb-panel-v6 .wb-book-tag {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #e5e5e5 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+}
+
+/* 多選標籤項目 - 淺灰色 */
+#enhanced-wb-panel-v6 .wb-ms-tag-item {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #e5e5e5 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 篩選標籤（管理頁面）- 未選中時淺灰色 */
+.wb-tag-filter-item {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #e5e5e5 !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 篩選標籤 - 選中時保持紫色高亮 */
+.wb-tag-filter-item.selected {
+    background: #7c5cbd !important;
+    color: #fff !important;
+    border-color: #7c5cbd !important;
+}
+
+/* 綁定頁面的標籤顯示 - 淺灰色 */
+#enhanced-wb-panel-v6 .wb-bind-tag {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #e5e5e5 !important;
+}
