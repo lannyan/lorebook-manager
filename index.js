@@ -2985,12 +2985,10 @@ jQuery(async () => {
     const injectButton = () => {
         if (document.getElementById(CONFIG.btnId)) return;
 
-        // 查找第一個 list-group-item，然後獲取其父容器
-        const firstMenuItem = document.querySelector('.list-group-item');
+        // 直接查找擴充功能菜單容器
+        const container = document.querySelector('#extensionsMenu');
 
-        if (firstMenuItem && firstMenuItem.parentElement) {
-            const container = firstMenuItem.parentElement;
-
+        if (container) {
             const html = `
                 <div id="${CONFIG.btnId}" class="list-group-item flex-container flexGap5 interactable" title="世界書管理" tabindex="0" role="listitem">
                     <i class="fa-solid fa-book-journal-whills"></i>
@@ -3005,10 +3003,10 @@ jQuery(async () => {
                 UI.open();
             });
 
-            console.log("[世界書編輯器] 按鈕已成功注入到擴充功能面板。");
+            console.log("[世界書編輯器] 按鈕已成功注入到擴充功能面板 (#extensionsMenu)。");
             return true;
         } else {
-            console.warn("[世界書編輯器] 找不到擴充功能面板容器。");
+            console.warn("[世界書編輯器] 找不到擴充功能面板容器 (#extensionsMenu)。");
             return false;
         }
     };
