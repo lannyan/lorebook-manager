@@ -2985,29 +2985,24 @@ jQuery(async () => {
     const injectButton = () => {
         if (document.getElementById(CONFIG.btnId)) return;
 
-        const container = document.querySelector('#options .options-content');
+        const targetButton = document.querySelector('#extensionsMenuButton');
 
-        if (container) {
-            const targetClasses = 'interactable';
-
+        if (targetButton) {
             const html = `
-                <a id="${CONFIG.btnId}" class="${targetClasses}" title="世界書管理" tabindex="0">
-                    <i class="fa-lg fa-solid fa-book-journal-whills"></i>
-                    <span>世界書</span>
-                </a>
+                <div id="${CONFIG.btnId}" class="fa-solid fa-book-journal-whills interactable" title="世界書管理" tabindex="0" style="display: flex;">
+                </div>
             `;
 
-            $(container).append(html);
+            $(targetButton).after(html);
 
             $(`#${CONFIG.btnId}`).on('click', (e) => {
                 e.preventDefault();
-                $('#options').hide();
                 UI.open();
             });
 
-            console.log("[世界書編輯器] 按鈕已成功注入到 .options-content。");
+            console.log("[世界書編輯器] 按鈕已成功注入到擴充功能區旁。");
         } else {
-            console.warn("[世界書編輯器] 找不到目標容器 #options .options-content。跳過按鈕注入。");
+            console.warn("[世界書編輯器] 找不到目標按鈕 #extensionsMenuButton。跳過按鈕注入。");
         }
     };
 
