@@ -384,22 +384,22 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 
 /* 绿灯样式 (普通启用) */
 #enhanced-wb-panel-v6 .wb-card.type-green .wb-token-display {
-    background-color: #dcfce7 !important;
-    color: #000000 !important;            /* <--- 改為純黑 */
-    font-weight: bold;                    /* 建議加粗以增加可讀性 */
+    background-color: #000000 !important;
+    color: #ffffff !important;            
+    font-weight: bold;                    
 }
 
 /* 蓝灯样式 (常驻) */
 #enhanced-wb-panel-v6 .wb-card.type-blue .wb-token-display {
-    background-color: #dbeafe !important;
-    color: #000000 !important;            /* <--- 改為純黑 */
-    font-weight: bold;                    /* 建議加粗以增加可讀性 */
+    background-color: #000000 !important;
+    color: #ffffff !important;            
+    font-weight: bold;                    
 }
 
 /* 禁用样式 (覆盖上面的颜色) */
 #enhanced-wb-panel-v6 .wb-card.disabled .wb-token-display {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    color: #6b7280 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
 }
 #enhanced-wb-panel-v6 .wb-card.disabled input.wb-inp-title {
     color: #a0a0a0 !important;
@@ -2007,11 +2007,3 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 #enhanced-wb-panel-v6 .wb-pos-wrapper {
     color: #a0a0a0;
 
-/* === 強制修正：Token 計數器字體顏色 === */
-#enhanced-wb-panel-v6 .wb-token-display,
-#enhanced-wb-panel-v6 .wb-card.type-green .wb-token-display,
-#enhanced-wb-panel-v6 .wb-card.type-blue .wb-token-display {
-    color: #000000 !important; /* 強制純黑 */
-    font-weight: 800 !important; /* 加粗 */
-    text-shadow: none !important; /* 移除任何可能導致模糊的陰影 */
-    -webkit-text-fill-color: #000000 !important; /* 確保不被瀏覽器填充色影響 */
