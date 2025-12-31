@@ -1,0 +1,12 @@
+{
+    "display_name": "世界書管理器",
+    "loading_order": 10,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "Lann",
+    "version": "2.1.0",
+    "homePage": "https://github.com/你的用戶名/worldbook-manager",
+    "auto_update": true
+}
