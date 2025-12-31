@@ -2985,27 +2985,14 @@ jQuery(async () => {
     const injectButton = () => {
         if (document.getElementById(CONFIG.btnId)) return;
 
-        // 嘗試多個可能的擴充功能面板容器
-        const possibleContainers = [
-            '#extensionsMenu',
-            '#extensions_settings',
-            '#extensions_settings2',
-            '.extensions_block',
-            '#third-party-extensions'
-        ];
+        // 查找第一個 list-group-item，然後獲取其父容器
+        const firstMenuItem = document.querySelector('.list-group-item');
 
-        let container = null;
-        for (const selector of possibleContainers) {
-            container = document.querySelector(selector);
-            if (container) {
-                console.log(`[世界書編輯器] 找到容器: ${selector}`);
-                break;
-            }
-        }
+        if (firstMenuItem && firstMenuItem.parentElement) {
+            const container = firstMenuItem.parentElement;
 
-        if (container) {
             const html = `
-                <div id="${CONFIG.btnId}" class="interactable" title="世界書管理" tabindex="0">
+                <div id="${CONFIG.btnId}" class="list-group-item flex-container flexGap5 interactable" title="世界書管理" tabindex="0" role="listitem">
                     <i class="fa-solid fa-book-journal-whills"></i>
                     <span>世界書管理</span>
                 </div>
