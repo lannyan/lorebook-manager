@@ -2330,9 +2330,9 @@ const UI = {
         overlay.className = 'wb-sort-modal-overlay';
         overlay.innerHTML = `
             <div class="wb-sort-modal" id="wb-analysis-box" style="width:550px; height:auto; max-height:90vh;">
-                <div class="wb-sort-header" style="background:#fff; padding: 15px 20px;">
+                <div class="wb-sort-header" style="background:#2d2d2d; padding: 15px 20px;">
                     <span style="font-size:1.1em; display:flex; align-items:center; gap:10px;">
-                        <i class="fa-solid fa-chart-pie" style="color:#374151;"></i>
+                        <i class="fa-solid fa-chart-pie" style="color:#e5e5e5;"></i>
                         <span id="wb-analysis-title">${STATE.currentBookName}</span>
                     </span>
                     <div style="display:flex; gap:15px; align-items:center;">
@@ -2340,7 +2340,7 @@ const UI = {
                         <div style="cursor:pointer" class="wb-close-modal"><i class="fa-solid fa-xmark"></i></div>
                     </div>
                 </div>
-                <div class="wb-sort-body" style="background:#fff; padding:0; overflow:hidden !important;">
+                <div class="wb-sort-body" style="background:#1a1a1a; padding:0; overflow:hidden !important;">
                     <div id="wb-analysis-content" class="wb-stats-container"></div>
                 </div>
             </div>`;
@@ -2352,7 +2352,7 @@ const UI = {
             const targetEntries = showAll ? sourceEntries : sourceEntries.filter(e => e.disable === false);
 
             const titleEl = overlay.querySelector('#wb-analysis-title');
-            titleEl.innerHTML = `${STATE.currentBookName} <span style="font-size:0.8em; font-weight:normal; color:#6b7280;">(${showAll ? '所有條目' : '僅已啟用'})</span>`;
+            titleEl.innerHTML = `<span style="color:#e5e5e5;">${STATE.currentBookName}</span> <span style="font-size:0.8em; font-weight:normal; color:#a0a0a0;">(${showAll ? '所有條目' : '僅已啟用'})</span>`;
 
             if (targetEntries.length === 0) {
                 overlay.querySelector('#wb-analysis-content').innerHTML = `<div style="text-align:center; color:#9ca3af; padding:40px;">暫無資料</div>`;
