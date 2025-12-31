@@ -328,6 +328,36 @@
     align-items: center;
 }
 
+/* 移動端：第二行（控制項行）允許換行 */
+@media (max-width: 768px) {
+    .wb-card-header > div > .wb-row:nth-child(2) {
+        display: grid;
+        grid-template-columns: auto auto 1fr auto;
+        gap: 8px;
+        align-items: center;
+    }
+
+    /* 開關按鈕固定寬度 */
+    .wb-card-header > div > .wb-row:nth-child(2) > .wb-ctrl-group {
+        grid-column: span 1;
+    }
+
+    /* 位置選擇器佔據剩餘空間 */
+    .wb-card-header > div > .wb-row:nth-child(2) > .wb-pos-wrapper {
+        grid-column: span 1;
+    }
+
+    /* 順序輸入框 */
+    .wb-card-header > div > .wb-row:nth-child(2) > .wb-ctrl-group.order-group {
+        grid-column: span 1;
+    }
+
+    /* Token 顯示 */
+    .wb-card-header > div > .wb-row:nth-child(2) > .wb-token-display {
+        grid-column: span 1;
+    }
+}
+
 .wb-inp-title {
     flex: 1;
     background: var(--wb-bg-tertiary);
@@ -1236,6 +1266,87 @@ input:checked + .wb-slider:before {
         height: 100vh;
         border-radius: 0;
         max-height: none;
+    }
+
+    /* === 修復卡片控制項換行問題 === */
+    .wb-card-header {
+        flex-direction: column;
+    }
+
+    .wb-row {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* 標題行保持不換行 */
+    .wb-row:first-child {
+        flex-wrap: nowrap;
+    }
+
+    /* 控制項行允許換行 */
+    .wb-row:last-child {
+        gap: 8px;
+    }
+
+    /* 位置選擇器適應小螢幕 */
+    .wb-pos-wrapper {
+        min-width: auto;
+        flex: 1 1 140px;
+    }
+
+    .inp-pos {
+        min-width: 100px;
+    }
+
+    /* 順序輸入框縮小 */
+    .wb-ctrl-group.order-group {
+        min-width: auto;
+        flex: 0 1 auto;
+    }
+
+    .inp-order {
+        width: 50px !important;
+    }
+
+    /* Token 顯示調整 */
+    .wb-token-display {
+        min-width: 50px;
+    }
+
+    /* 開關按鈕群組 */
+    .wb-ctrl-group {
+        flex: 0 0 auto;
+    }
+
+    /* 輸入框號碼欄位 */
+    .wb-inp-num {
+        font-size: 0.8em;
+    }
+
+    /* 條目卡片內邊距調整 */
+    .wb-card {
+        padding: 12px;
+    }
+
+    /* Tab 文字縮小 */
+    .wb-tab {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+
+    .wb-tab span {
+        display: none;
+    }
+
+    /* 書籍選擇欄適配 */
+    .wb-book-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    /* 統計行文字縮小 */
+    .wb-stat-item {
+        font-size: 0.8em;
     }
 }
 
