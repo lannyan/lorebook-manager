@@ -1672,7 +1672,7 @@ const UI = {
             <div class="wb-popup-header"><span>${entry.comment || '未命名條目'}</span></div>
             <input class="wb-popup-input-keys" placeholder="關鍵詞 (英文逗號分隔)" value="${escapeHtml(tempKeys)}">
             <textarea class="wb-popup-textarea" placeholder="在此編輯內容...">${escapeHtml(tempContent)}</textarea>
-            <div class="wb-popup-footer"><button class="wb-btn-black btn-cancel">取消</button><button class="wb-btn-black btn-save">儲存</button></div>
+            <div class="wb-popup-footer"><button class="wb-btn-rect btn-cancel" style="background:#fff; color:#000; border:1px solid #e5e7eb;">取消</button><button class="wb-btn-rect btn-save">儲存</button></div>
         `;
         overlay.appendChild(popup);
         document.body.appendChild(overlay);
@@ -2330,9 +2330,9 @@ const UI = {
         overlay.className = 'wb-sort-modal-overlay';
         overlay.innerHTML = `
             <div class="wb-sort-modal" id="wb-analysis-box" style="width:550px; height:auto; max-height:90vh;">
-                <div class="wb-sort-header" style="background:#fff; padding: 15px 20px;">
+                <div class="wb-sort-header" style="background:#2d2d2d; padding: 15px 20px;">
                     <span style="font-size:1.1em; display:flex; align-items:center; gap:10px;">
-                        <i class="fa-solid fa-chart-pie" style="color:#374151;"></i>
+                        <i class="fa-solid fa-chart-pie" style="color:#e5e5e5;"></i>
                         <span id="wb-analysis-title">${STATE.currentBookName}</span>
                     </span>
                     <div style="display:flex; gap:15px; align-items:center;">
@@ -2340,7 +2340,7 @@ const UI = {
                         <div style="cursor:pointer" class="wb-close-modal"><i class="fa-solid fa-xmark"></i></div>
                     </div>
                 </div>
-                <div class="wb-sort-body" style="background:#fff; padding:0; overflow:hidden !important;">
+                <div class="wb-sort-body" style="background:#1a1a1a; padding:0; overflow:hidden !important;">
                     <div id="wb-analysis-content" class="wb-stats-container"></div>
                 </div>
             </div>`;
@@ -2352,7 +2352,7 @@ const UI = {
             const targetEntries = showAll ? sourceEntries : sourceEntries.filter(e => e.disable === false);
 
             const titleEl = overlay.querySelector('#wb-analysis-title');
-            titleEl.innerHTML = `${STATE.currentBookName} <span style="font-size:0.8em; font-weight:normal; color:#6b7280;">(${showAll ? '所有條目' : '僅已啟用'})</span>`;
+            titleEl.innerHTML = `<span style="color:#e5e5e5;">${STATE.currentBookName}</span> <span style="font-size:0.8em; font-weight:normal; color:#a0a0a0;">(${showAll ? '所有條目' : '僅已啟用'})</span>`;
 
             if (targetEntries.length === 0) {
                 overlay.querySelector('#wb-analysis-content').innerHTML = `<div style="text-align:center; color:#9ca3af; padding:40px;">暫無資料</div>`;
@@ -2647,9 +2647,9 @@ const UI = {
 
             overlay.innerHTML = `
                 <div class="wb-sort-modal" style="width:1000px; height:85vh; max-width:95vw; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-                    <div class="wb-sort-header" style="background:#fff; border-bottom:1px solid #e5e7eb; padding:10px 20px; height:60px;">
-                        <span style="font-size:1.1em; font-weight:bold; color:#111827; display:flex; align-items:center; gap:15px;">
-                            <i class="fa-solid fa-align-left" id="wb-ctx-toggle-sidebar" style="cursor:pointer; color:#6b7280; transition:0.2s" title="切換側邊欄"></i>
+                    <div class="wb-sort-header" style="background:#2d2d2d; border-bottom:1px solid #404040; padding:10px 20px; height:60px;">
+                        <span style="font-size:1.1em; font-weight:bold; color:#e5e5e5; display:flex; align-items:center; gap:15px;">
+                            <i class="fa-solid fa-align-left" id="wb-ctx-toggle-sidebar" style="cursor:pointer; color:#a0a0a0; transition:0.2s" title="切換側邊欄"></i>
                             <span class="wb-ctx-header-title-text">實際上下文預覽</span>
                         </span>
                         <div style="display:flex; align-items:center;">

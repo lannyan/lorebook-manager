@@ -573,7 +573,7 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 .wb-gr-option {
     padding: 8px 12px;
     margin: 2px 4px; /* 修改：增加左右外边距 */
-    color: #2c3e50;
+    color: #e5e5e5;
     cursor: pointer;
     position: relative;
     font-size: 0.9em;
@@ -652,7 +652,7 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 }
 @keyframes wbFadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
 .wb-popup-header {
-    font-weight: bold; color: #000000; padding-bottom: 5px;
+    font-weight: bold; color: #ffffff; padding-bottom: 5px;
     display: flex; justify-content: center;
     align-items: center; font-size: 1.1em;
 }
