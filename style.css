@@ -1173,7 +1173,7 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 .wb-warning-alert-box {
     background-color: #fef2f2;
     border: 1px solid #fee2e2;
-    color: #ffffff;
+    color: #991b1b;
     padding: 15px;
     border-radius: 6px;
     margin-bottom: 15px;
@@ -1185,7 +1185,7 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
     justify-content: space-between;
     align-items: center;
     background: #1a1a1a;
-    color: #e5e5e5 !important;
+    color: #ffffff !important;
     border: 1px solid #404040;
     padding: 10px 15px;
     border-radius: 8px;
