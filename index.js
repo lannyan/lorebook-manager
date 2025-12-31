@@ -2482,7 +2482,7 @@ const UI = {
             <div class="wb-warning-list-item">
                 <div style="display:flex; align-items:center; gap:10px; overflow:hidden;">
                     <i class="fa-solid fa-circle-exclamation" style="color:#ef4444;"></i>
-                    <span style="font-weight:bold; color:#374151; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${entry.comment || '未命名條目'}</span>
+                    <span style="font-weight:bold; color:#ffffff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${entry.comment || '未命名條目'}</span>
                 </div>
                 <i class="fa-solid fa-eye" style="cursor:pointer; color:#6b7280; padding:5px;" title="查看/編輯" data-edit="${entry.uid}"></i>
             </div>`;
