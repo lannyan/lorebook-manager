@@ -1741,62 +1741,53 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 }
 
 /* ========================================
-   輸入框深色優化（淡灰底+深色文字）
+   輸入框配色優化（淡底黑字）
    ======================================== */
 
-/* 標題輸入框 - 淡灰底色，深色文字 */
+/* 標題輸入框 - 淡灰底+黑色文字 */
 #enhanced-wb-panel-v6 .wb-inp-title {
-    background: rgba(255, 255, 255, 0.12) !important;
-    color: #1f2937 !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    -webkit-text-fill-color: #1f2937 !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #000 !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 #enhanced-wb-panel-v6 .wb-inp-title:hover {
-    background: rgba(255, 255, 255, 0.15) !important;
-    border-color: rgba(255, 255, 255, 0.25) !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 #enhanced-wb-panel-v6 .wb-inp-title:focus {
-    background: rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
     border-color: #7c5cbd !important;
-    color: #000 !important;
-    -webkit-text-fill-color: #000 !important;
 }
 
-/* @D 和順序輸入框 - 淡灰底色，深色文字 */
+/* @D 和順序輸入框 - 淡灰底+黑色文字 */
 #enhanced-wb-panel-v6 .wb-inp-num {
-    background: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: #1f2937 !important;
-    -webkit-text-fill-color: #1f2937 !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 #enhanced-wb-panel-v6 .wb-inp-num:focus {
-    background: rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
     border-color: #7c5cbd !important;
-    color: #000 !important;
-    -webkit-text-fill-color: #000 !important;
 }
 
-/* Token 顯示保持原樣（已有顏色背景）*/
-/* 綠燈和藍燈的 Token 不變 */
-
-/* 搜尋框 - 淡灰底色，深色文字 */
+/* 搜尋框 - 淡灰底+黑色文字 */
 #enhanced-wb-panel-v6 input[type="text"],
 #enhanced-wb-panel-v6 input[type="search"] {
-    background: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: #1f2937 !important;
-    -webkit-text-fill-color: #1f2937 !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 #enhanced-wb-panel-v6 input[type="text"]:focus,
 #enhanced-wb-panel-v6 input[type="search"]:focus {
-    background: rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
     border-color: #7c5cbd !important;
-    color: #000 !important;
-    -webkit-text-fill-color: #000 !important;
 }
 
 #enhanced-wb-panel-v6 input[type="text"]::placeholder,
@@ -1805,47 +1796,53 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
     -webkit-text-fill-color: rgba(0, 0, 0, 0.4) !important;
 }
 
-/* 下拉選擇器觸發器 - 淡灰底色 */
+/* 下拉選擇器觸發器 - 淡灰底+黑色文字 */
 .wb-gr-trigger {
-    background: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: #1f2937 !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #000 !important;
 }
 
 .wb-gr-trigger:hover {
-    background: rgba(255, 255, 255, 0.15) !important;
-    border-color: rgba(255, 255, 255, 0.25) !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
 }
-
-/* 圓形按鈕保持原樣（已有樣式）*/
-/* 開關按鈕保持原樣 */
 
 /* 管理頁面搜尋框 */
 #wb-manage-search {
-    background: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: #1f2937 !important;
-    -webkit-text-fill-color: #1f2937 !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 #wb-manage-search:focus {
-    background: rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
     border-color: #7c5cbd !important;
-    color: #000 !important;
-    -webkit-text-fill-color: #000 !important;
 }
 
 /* 備註輸入框 */
 .wb-manage-note {
-    background: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: #1f2937 !important;
-    -webkit-text-fill-color: #1f2937 !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 .wb-manage-note:focus {
-    background: rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
     border-color: #7c5cbd !important;
-    color: #000 !important;
-    -webkit-text-fill-color: #000 !important;
+}
+
+/* 卡片背景文字保持白色 */
+#enhanced-wb-panel-v6 .wb-card {
+    color: #e5e5e5;
+}
+
+#enhanced-wb-panel-v6 .wb-ctrl-group {
+    color: #a0a0a0;
+}
+
+#enhanced-wb-panel-v6 .wb-ctrl-group span {
+    color: #a0a0a0;
 }
