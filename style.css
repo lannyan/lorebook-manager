@@ -1251,6 +1251,12 @@ input:checked + .wb-slider:before {
         width: 100vw;
         height: 100vh;
         border-radius: 0;
+        /* 修復移動端定位：使用 top/left 而非 transform */
+        top: 0;
+        left: 0;
+        transform: none;
+        max-width: 100vw;
+        max-height: 100vh;
     }
 
     .wb-bind-grid {
@@ -1347,6 +1353,17 @@ input:checked + .wb-slider:before {
     /* 統計行文字縮小 */
     .wb-stat-item {
         font-size: 0.8em;
+    }
+
+    /* 頭部欄縮小 */
+    .wb-header-bar {
+        padding: 0 10px;
+        height: 50px;
+    }
+
+    /* 列表內邊距縮小 */
+    .wb-list {
+        padding: 10px;
     }
 }
 
