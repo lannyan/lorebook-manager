@@ -661,14 +661,16 @@ div#wb-active-dropdown input.wb-gr-search-input:focus {
 
 /* 底部信息 */
 #enhanced-wb-panel-v6 .wb-footer-info {
-    text-align: center; color: #a0a0a0; font-size: 0.9em; line-height: 1.6;
+    text-align: center; color: #e5e5e5; font-size: 0.9em; line-height: 1.6;
     position: absolute; bottom: 60px; left: 0; width: 100%;
-    background: rgba(255, 255, 255, 0.95); z-index: 10;
+    background: rgba(26, 26, 26, 0.95); z-index: 10;
+    padding: 8px 0;
+    border-top: 1px solid #404040;
 }
 #enhanced-wb-panel-v6 .wb-footer-avatar {
     width: 24px; height: 24px; border-radius: 50%;
     vertical-align: middle; margin: 0 5px; object-fit: cover;
-    border: 1px solid #ddd; display: inline-block;
+    border: 1px solid #404040; display: inline-block;
 }
 
 /* 统计 */
